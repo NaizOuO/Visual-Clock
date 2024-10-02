@@ -1,11 +1,11 @@
-//¥iµø¤Æ«È»s®ÉÄÁ
+//å¯è¦–åŒ–å®¢è£½æ™‚é˜
 #include<iostream>
 #include<windows.h>
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
 
-#define ANGLE M_PI/180 
+#define ANGLE 3.1415926/180 
 
 SYSTEMTIME sys;
 
@@ -78,12 +78,12 @@ void screenUI(int width, int lengh, int shape)
 	StartPoint_y = (float)(lengh/2);
 	if(shape==0){
 		for(int i=0;i<width+1;i++){
-			printChar(i-StartPoint_x,-StartPoint_y,"¢e");
-			printChar(i-StartPoint_x,lengh-1-StartPoint_y,"¢e");
+			printChar(i-StartPoint_x,-StartPoint_y,"â–„");
+			printChar(i-StartPoint_x,lengh-1-StartPoint_y,"â–„");
 		} 
 		for(int i=1;i<lengh;i++){
-			printChar(-StartPoint_x,i-StartPoint_y,"¢i");
-			printChar(width-StartPoint_x,i-StartPoint_y,"¢i");
+			printChar(-StartPoint_x,i-StartPoint_y,"â–ˆ");
+			printChar(width-StartPoint_x,i-StartPoint_y,"â–ˆ");
 		}
 	}
 	else if(shape==1){
@@ -98,30 +98,30 @@ void screenUI(int width, int lengh, int shape)
 			printChar(i,-pow(1-pow(i/MajAxis,2),0.5)*MinAxis,".");
 		}
 		for(int i=0;i<width+1;i++){
-			printChar(i-StartPoint_x,-StartPoint_y,"¢e");
-			printChar(i-StartPoint_x,lengh-1-StartPoint_y,"¢e");
+			printChar(i-StartPoint_x,-StartPoint_y,"â–„");
+			printChar(i-StartPoint_x,lengh-1-StartPoint_y,"â–„");
 		} 
 		for(int i=1;i<lengh;i++){
-			printChar(-StartPoint_x,i-StartPoint_y,"¢i");
-			printChar(width-StartPoint_x,i-StartPoint_y,"¢i");
+			printChar(-StartPoint_x,i-StartPoint_y,"â–ˆ");
+			printChar(width-StartPoint_x,i-StartPoint_y,"â–ˆ");
 		}
 	}
 	else return;
 } 
 
 void clocknum(void){
-	printChar(	MajAxis*cos(ANGLE*(270+30*1)),	MinAxis*sin(ANGLE*(270+30*1)),"¢°");
-	printChar(	MajAxis*cos(ANGLE*(270+30*2)),	MinAxis*sin(ANGLE*(270+30*2)),"¢±");
-	printChar(	MajAxis*cos(ANGLE*(270+30*3)),	MinAxis*sin(ANGLE*(270+30*3)),"¢²");
-	printChar(	MajAxis*cos(ANGLE*(270+30*4)),	MinAxis*sin(ANGLE*(270+30*4)),"¢³");
-	printChar(	MajAxis*cos(ANGLE*(270+30*5)),	MinAxis*sin(ANGLE*(270+30*5)),"¢´");
-	printChar(	MajAxis*cos(ANGLE*(270+30*6)),	MinAxis*sin(ANGLE*(270+30*6)),"¢µ");
-	printChar(	MajAxis*cos(ANGLE*(270+30*7)),	MinAxis*sin(ANGLE*(270+30*7)),"¢¶");
-	printChar(	MajAxis*cos(ANGLE*(270+30*8)),	MinAxis*sin(ANGLE*(270+30*8)),"¢·");
-	printChar(	MajAxis*cos(ANGLE*(270+30*9)),	MinAxis*sin(ANGLE*(270+30*9)),"¢¸");
-	printChar(	MajAxis*cos(ANGLE*(270+30*10)),	MinAxis*sin(ANGLE*(270+30*10)),"¢°¢¯");
-	printChar(	MajAxis*cos(ANGLE*(270+30*11)),	MinAxis*sin(ANGLE*(270+30*11)),"¢°¢°");
-	printChar(	MajAxis*cos(ANGLE*(270+30*12)),	MinAxis*sin(ANGLE*(270+30*12)),"¢°¢±");
+	printChar(	MajAxis*cos(ANGLE*(270+30*1)),	MinAxis*sin(ANGLE*(270+30*1)),"ï¼‘");
+	printChar(	MajAxis*cos(ANGLE*(270+30*2)),	MinAxis*sin(ANGLE*(270+30*2)),"ï¼’");
+	printChar(	MajAxis*cos(ANGLE*(270+30*3)),	MinAxis*sin(ANGLE*(270+30*3)),"ï¼“");
+	printChar(	MajAxis*cos(ANGLE*(270+30*4)),	MinAxis*sin(ANGLE*(270+30*4)),"ï¼”");
+	printChar(	MajAxis*cos(ANGLE*(270+30*5)),	MinAxis*sin(ANGLE*(270+30*5)),"ï¼•");
+	printChar(	MajAxis*cos(ANGLE*(270+30*6)),	MinAxis*sin(ANGLE*(270+30*6)),"ï¼–");
+	printChar(	MajAxis*cos(ANGLE*(270+30*7)),	MinAxis*sin(ANGLE*(270+30*7)),"ï¼—");
+	printChar(	MajAxis*cos(ANGLE*(270+30*8)),	MinAxis*sin(ANGLE*(270+30*8)),"ï¼˜");
+	printChar(	MajAxis*cos(ANGLE*(270+30*9)),	MinAxis*sin(ANGLE*(270+30*9)),"ï¼™");
+	printChar(	MajAxis*cos(ANGLE*(270+30*10)),	MinAxis*sin(ANGLE*(270+30*10)),"ï¼‘ï¼");
+	printChar(	MajAxis*cos(ANGLE*(270+30*11)),	MinAxis*sin(ANGLE*(270+30*11)),"ï¼‘ï¼‘");
+	printChar(	MajAxis*cos(ANGLE*(270+30*12)),	MinAxis*sin(ANGLE*(270+30*12)),"ï¼‘ï¼’");
 }
 
 void hourhand(int hours)
